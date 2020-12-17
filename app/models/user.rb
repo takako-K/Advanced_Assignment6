@@ -10,6 +10,7 @@ class User < ApplicationRecord
     favorites.where(user_id: user.id).exists?
   end
   has_many :favorite_books, through: :favorites, source: :book
+  has_many :book_comments, dependent: :destroy
 
   attachment :profile_image
 
