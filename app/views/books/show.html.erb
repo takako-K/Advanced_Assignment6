@@ -57,7 +57,7 @@
         <div id="book_comments_<%= @book.id %>">
           <%= render partial: 'book_comments/comments', local: { book: @book} %>
         </div>
-        <div id="book_newcommentform_<%= book.id %>">
+        <div id="book_newcommentform_<%= @book.id %>">
           <%= render partial: 'book_comments/newcommentform', local: { book: @book} %>
         </div>
 
