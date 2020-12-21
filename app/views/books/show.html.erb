@@ -30,9 +30,9 @@
                   </div>
               </td>
               <td>
-                <p>
-                  コメント数:<%= @book.book_comments.count %>
-                </p>
+                <div id="comments_count_<%= @book.id %>">
+                  <%= render partial: 'book_comments/commentscount', locals: { book: @book} %>
+                </div>
               </td>
               <td>
                 <% if @book.user.id == current_user.id %>
