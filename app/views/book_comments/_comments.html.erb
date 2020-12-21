@@ -1,4 +1,4 @@
-<div class="comments">
+<div class="book_comments">
     <% @book.book_comments.each do |book_comment| %>
       <p><%= attachment_image_tag book_comment.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %></p>
       <%= book_comment.user.name %>
